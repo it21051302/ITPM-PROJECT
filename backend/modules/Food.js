@@ -2,35 +2,30 @@ const mongoose = require('mongoose');
 
 const schema = mongoose.Schema;
 
-const AppointmentsSchema = new schema({
+const FoodsSchema = new schema({
 
-    appointmentId :{
+    foodId :{
         type : Number,
         required : true
     },
 
-    paitentName :{
+    foodName :{
         type : String,
         required : true
     },
 
-    paitentAge :{
-        type : Number,
-        required : true
-    },
-
-    patientAddress :{
+    Description :{
         type : String,
         required : true
     },
 
-    patientIssue :{
+    Nutriants :{
         type : String,
         required : true
     }
 
 })
 
-const Appointments = mongoose.model("Appointments",AppointmentsSchema);
+const Food = mongoose.model("Food",FoodsSchema);
 
-module.exports = Appointments;
+module.exports = Food;
