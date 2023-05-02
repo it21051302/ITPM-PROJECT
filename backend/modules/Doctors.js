@@ -14,7 +14,7 @@ const DoctorsSchema = new schema({
     },
 
     doctorAge :{
-        type : String,
+        type : Number,
         required : true
     },
 
