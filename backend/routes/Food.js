@@ -1,20 +1,20 @@
 const router = require("express").Router();
 const Food = require("../modules/Food");
 
+
 //create,Adding function in crud
 router.route("/add").post((req,res) =>{
-
-    const foodId = Number(req.body.foodId);
+console.log(req.body);
+    const foodId = req.body.foodId;
     const foodName = req.body.foodName;
     const Description = req.body.Description;
     const Nutriants = req.body.Nutriants;
     //one way to use the object
     const newFood = new Food({
-
-        foodId,
-        foodName,
-        Description,
-        Nutriants
+        foodId :foodId,
+        foodName: foodName,
+        Description: Description,
+        Nutriants: Nutriants
         
     })
 
